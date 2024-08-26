@@ -1,0 +1,223 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#check {
+    display: none;
+}
+
+.checkbtn {
+    display: none;
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 40px;
+    line-height: 80px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #3c502c;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 9998;
+}
+
+nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: white;
+}
+
+nav ul li a:hover {
+    background: none;
+    color: #00e623;
+}
+
+#check:checked~ul {
+    left: 0;
+    z-index: 9998; /* Додано */
+}
+
+#check:checked ~ nav {
+    z-index: 9999; /* Додано */
+}
+
+@media (max-width: 1733px) {
+    .checkbtn {
+        display: block;
+    }
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #e4e4e4;
+    overflow-x: hidden;
+}
+
+nav {
+    background: #90c52d;
+    height: 100%;
+    width: 100%;
+    position: relative; /* Додано */
+    z-index: 9999; /* Додано */
+}
+
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #3c502c;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 9998;
+    padding-top: 20px; /* Додано для відстані від верхньої частини вікна */
+}
+
+
+nav ul li {
+    display: block;
+    margin: 20px 0; /* Змінено відступи */
+    line-height: normal; /* Змінено висоту рядка */
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: white;
+    display: block; /* Змінено */
+    padding: 10px 0; /* Змінено */
+}
+
+a:hover,
+a.active {
+    background: none;
+    color: #00e623;
+}
+
+a.active,
+a:hover {
+    background: #6e6e6e;
+    transition: .5s;
+}
+
+@keyframes parallax {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.parallax-layer {
+    animation: parallax 5s forwards;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    color: #4e4e4e;
+    font: 50px "Trebuchet MS", "Lucida Sans";
+    text-align: center;
+}
+
+#pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+#pages div {
+    margin: 0 5px;
+}
+
+#pages a {
+    font: 1px "Trebuchet MS", "Lucida Sans";
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    border: 2px solid #000000;
+    padding: 5px 15px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Залишено незмінними стилі для таблиці */
+.rounded {
+    counter-reset: li;
+    list-style: none;
+    font: 14px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    overflow: auto; /* Додано */
+    /* max-height: calc(100vh - 200px); Додано */
+}
+
+.rounded li {
+    position: relative;
+    font: 30px "Trebuchet MS", "Lucida Sans";
+    padding: .4em .4em .4em 2em;
+    margin: .5em 40px;
+    background: #DAD2CA;
+    color: #444;
+    border-radius: .3em;
+    transition: .3s ease-out;
+}
+
+.rounded li:hover {
+    background: #E9E4E0;
+}
+
+.rounded li:hover::before {
+    transform: rotate(180deg);
+}
+
+.rounded li::before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #8FD4C1;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5em;
+    transition: all .3s ease-out;
+}

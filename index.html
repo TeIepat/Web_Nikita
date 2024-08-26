@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="сайт Рік і Морті, мультфільм Рік і Морті, Morty сайт">
+    <meta name="keywords" content="Rick and Morty, Morty, Rick, рік і морті">
+    <meta name="author" content="Нікіта">
+    <meta property="og:title" content="Rick & Morty Fan Site">
+    <meta property="og:description" content="Подорож у світ Ріка та Морті">
+    <meta property="og:image" content="img/rick_and_morty_scene.png">
+    <meta property="og:url" content="http://example.com/">
+    <title>Rick & Morty</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="video_optimization.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Rick and Morty</label>
+            <ul>
+                <li><a class="active" href="index.html">Головна</a></li>
+                <li><a href="Rick.html">Rick</a></li>
+                <li><a href="Morty.html">Morty</a></li>
+                <li><a href="episodes.html">Епізоди</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="Sign.html">Sign in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section  class="parallax-section">
+            <h1 class="centered-text">Ласкаво просимо у світ Ріка та Морті!</h1>
+            <p class="centered-text"> «Рік і Морті» – це не просто мультфільм, а захоплююча подорож у нескінченний космос. <br>
+                <br>
+                <p class="centered-text"> У кожній серії на вас чекають науково-фантастичні пригоди, гумор на грані та запаморочливі парадокси.
+                <br>
+                Відвідайте альтернативні всесвіти, пориньте у невідомі виміри та розкрийте секрети безумства Ріка!<br>
+                Це шоу, яке розвиває вашу уяву, розширює свідомість та дарує неймовірні емоції. <br>
+                Приєднуйтесь до Ріка та Морті в їхніх шалених пригодах, де кожен момент непередбачуваний та захоплюючий!
+                </p>
+            </p>
+            <section class="video">
+                <div class="video-thumbnail" data-video-src="https://www.youtube.com/embed/jerFRSQW9g8?si=a3MwyaaI9N375Hbr">
+                    <img src="https://img.youtube.com/vi/jerFRSQW9g8/maxresdefault.jpg" alt="Video Thumbnail" loading="lazy">
+                </div>
+            </section>
+        </section>
+    </main>
+    <script>
+        // JavaScript для автоматичного відтворення відео по кліку на зображення
+        document.querySelectorAll('.video-thumbnail').forEach(item => {
+            item.addEventListener('click', event => {
+                const src = item.getAttribute('data-video-src');
+                const iframe = document.createElement('iframe');
+                iframe.src = src;
+                iframe.width = '100%';
+                iframe.height = '100%';
+                iframe.allow = 'autoplay; encrypted-media';
+                iframe.allowFullscreen = true;
+                item.innerHTML = '';
+                item.appendChild(iframe);
+            });
+        });
+    </script>
+</body>
+
+</html>
