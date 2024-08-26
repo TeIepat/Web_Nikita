@@ -35,6 +35,10 @@ a {
     font-family: Arial, sans-serif;
 }
 
+h1, p {
+    text-shadow: 2px 2px 1px #000000;
+}
+
 body {
     background: #363636;
     overflow-x: hidden;
@@ -58,11 +62,13 @@ nav {
 }
 
 h1 {
-    color: white;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.6;
 }
 
 p {
-    text-align: justify;
+    text-align: center;
     /* Вирівнювання тексту по ширині */
     font-size: 18px;
     /* Розмір шрифту */
@@ -70,15 +76,9 @@ p {
     /* Висота рядка */
     color: #ffffff;
     /* Колір тексту */
-    margin: 20px 0;
-    /* Відступи навколо абзацу */
 }
 
-.centered-text {
-    text-align: center;
-    font-size: 1.5em;
-    line-height: 1.6;
-}
+
 
 label.logo {
     color: #ffffff;
@@ -103,14 +103,16 @@ nav ul li a {
     color: white;
     font-size: 17px;
     padding: 7px 13px;
-    border-radius: 3px;
+    border-radius: 30px;
     text-transform: uppercase;
 }
 
 a.active,
 a:hover {
-    background: #ffffff52;
+    background: #15ff00a4;
+    border: 1px solid rgb(0, 255, 136);
     transition: .5s;
+    color: #000000;
 }
 
 .checkbtn {
@@ -181,7 +183,7 @@ a:hover {
 .video {
     text-align: center;
     /* Центрує всі внутрішні елементи по горизонталі */
-    padding: 20px;
+    padding: 2%;
     /* Відступи для покращення розміщення */
 }
 

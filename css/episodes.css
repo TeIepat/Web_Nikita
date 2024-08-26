@@ -3,7 +3,7 @@
 }
 
 .parallax-section {
-    background-image: url('back/morty_back.png');
+    background-image: url('back/episode_back.png');
     background-attachment: fixed;
     /* Фонове зображення буде фіксоване */
     background-size: cover;
@@ -16,7 +16,7 @@
 }
 
 header {
-    background-image: url('back/morty_back.png');
+    background-image: url('back/episode_back.png');
     background-attachment: fixed;
     background-size: cover;
     /* Зображення покриває всю секцію */
@@ -31,16 +31,12 @@ h1,
 p,
 a {
     margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
 }
 
-h1, p {
+h1,
+p {
     text-shadow: 2px 2px 1px #000000;
-}
-
-body {
-    overflow-x: hidden;
 }
 
 /* Навігація */
@@ -56,8 +52,6 @@ nav {
     /* Ефект розмиття */
     -webkit-backdrop-filter: blur(10px);
     /* Для підтримки в Safari */
-    color: #ffffff;
-    /* Білий колір тексту */
 }
 
 h1 {

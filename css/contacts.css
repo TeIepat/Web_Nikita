@@ -1,24 +1,49 @@
 * {
-    padding: 0;
-    margin: 0;
     text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-h1,h2,h3,p {
-    color: white;
+.parallax-section {
+    background-image: url('back/contacts_back.png');
+    background-attachment: fixed;
+    /* Фонове зображення буде фіксоване */
+    background-size: cover;
+    /* Зображення покриває всю секцію */
+    background-position: center;
+    /* Центрування зображення */
+    background-repeat: no-repeat;
+    /* Заборонити повторення зображення */
+    height: 1000px;
 }
 
-body {
+header {
+    background-image: url('back/contacts_back.png');
+    background-attachment: fixed;
+    background-size: cover;
+    /* Зображення покриває всю секцію */
+    background-position: center;
+    /* Центрування зображення */
+    background-repeat: no-repeat;
+}
+
+/* Основні стилі */
+body,
+h1,
+p,
+a {
     margin: 0;
-    flex-direction: row;
-    height: 100vh;
     font-family: Arial, sans-serif;
-    background: #363636;
 }
 
+h1,
+h2,
+h3,
+p {
+    color: white;
+    text-shadow: 2px 2px 2px #000000;
+    text-align: center;
+}
+
+/* Навігація */
 nav {
     height: 70px;
     display: flex;
@@ -31,8 +56,6 @@ nav {
     /* Ефект розмиття */
     -webkit-backdrop-filter: blur(10px);
     /* Для підтримки в Safari */
-    color: #ffffff;
-    /* Білий колір тексту */
 }
 
 label.logo {
@@ -41,6 +64,7 @@ label.logo {
     line-height: 80px;
     padding: 0 20px;
     font-weight: bold;
+
 }
 
 nav ul {
@@ -58,14 +82,17 @@ nav ul li a {
     color: white;
     font-size: 17px;
     padding: 7px 13px;
-    border-radius: 3px;
+    border-radius: 30px;
     text-transform: uppercase;
+    
 }
 
 a.active,
 a:hover {
-    background: #ffffff52;
+    background: #15ff00a4;
+    border: 1px solid rgb(0, 255, 136);
     transition: .5s;
+    color: #000000;
 }
 
 .checkbtn {
@@ -154,38 +181,6 @@ a:hover {
     #check:checked~ul {
         left: 0;
     }
-}
-
-h2 {
-    text-align: center;
-}
-
-#pages {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0;
-}
-
-#pages div {
-    margin: 0 5px;
-}
-
-#pages a {
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-    padding: 5px 15px;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    background-color: #FFFFFF;
-    /*transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;*/
-}
-
-#pages a:hover {
-    background-color: #ffffff;
-    color: #000000;
 }
 
 .contact-info,

@@ -13,10 +13,6 @@
     background-repeat: no-repeat;
     /* Заборонити повторення зображення */
     height: 1000px;
-    /* Висота секції */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 header {
@@ -35,12 +31,13 @@ h1,
 p,
 a {
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
     font-family: Arial, sans-serif;
 }
 
-body {
-    overflow-x: hidden;
+h1,
+p {
+    text-shadow: 2px 2px 1px #000000;
 }
 
 /* Навігація */
@@ -56,16 +53,16 @@ nav {
     /* Ефект розмиття */
     -webkit-backdrop-filter: blur(10px);
     /* Для підтримки в Safari */
-    color: #ffffff;
-    /* Білий колір тексту */
 }
 
 h1 {
-    color: white;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.6;
 }
 
 p {
-    text-align: justify;
+    text-align: center;
     /* Вирівнювання тексту по ширині */
     font-size: 18px;
     /* Розмір шрифту */
@@ -98,14 +95,16 @@ nav ul li a {
     color: white;
     font-size: 17px;
     padding: 7px 13px;
-    border-radius: 3px;
+    border-radius: 30px;
     text-transform: uppercase;
 }
 
 a.active,
 a:hover {
-    background: #ffffff52;
+    background: #15ff00a4;
+    border: 1px solid rgb(0, 255, 136);
     transition: .5s;
+    color: #000000;
 }
 
 .checkbtn {

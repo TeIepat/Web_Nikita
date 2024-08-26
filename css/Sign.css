@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: #f0f0f0;
+    background: #51fc5f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,8 +8,21 @@ body {
     margin: 0;
 }
 
+.parallax-section {
+    background-image: url('back/sing_back.png');
+    background-attachment: fixed;
+    /* Фонове зображення буде фіксоване */
+    background-size: cover;
+    /* Зображення покриває всю секцію */
+    background-position: center;
+    /* Центрування зображення */
+    background-repeat: no-repeat;
+    /* Заборонити повторення зображення */
+    height: 1000px;
+}
+
 .wrapper {
-    background: #fff;
+    background-image: url('back/box_back.png');
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -29,7 +42,7 @@ form {
 
 h1 {
     margin-bottom: 20px;
-    color: #333;
+    color: #333333;
 }
 
 .input-box {
@@ -42,7 +55,7 @@ h1 {
 .input-box input {
     width: 100%;
     padding: 10px 40px 10px 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #023a00;
     border-radius: 5px;
     outline: none;
     transition: all 0.3s ease;
@@ -62,8 +75,9 @@ h1 {
 }
 
 .btn {
-    background: #007bff;
-    color: #fff;
+    background: #00ff0d;
+    color: #000000;
+    font-size: 19px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -72,7 +86,7 @@ h1 {
 }
 
 .btn:hover {
-    background: #0056b3;
+    background: #137000;
 }
 
 .alert {
